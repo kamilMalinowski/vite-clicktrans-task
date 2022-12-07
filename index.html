@@ -46,7 +46,7 @@
             <label class="form__label" for="vat">
               VAT<span class="form__required">*</span>
             </label>
-            <select class="form__select" name="vat" id="vat">
+            <select class="form__select" name="vat" id="vat" required>
               <option value="">Choose VAT</option>
               <option value="19%">19%</option>
               <option value="21%">21%</option>
@@ -56,7 +56,28 @@
             <span class="form__messages form__messages--select"></span>
           </div>
 
-          <!-- -->
+          <!-- text input - netto -->
+          <div class="form__box">
+            <label class="form__label" for="netto">
+              Price netto EUR<span class="form__required">*</span>
+            </label>
+            <input type="text" name="netto" id="netto" class="form__input form__input--netto" required disabled> 
+            <span class="form__messages form__messages--netto"></span>
+          </div>
+
+          <!-- text input - brutto -->
+          <div class="form__box">
+            <label class="form__label" for="brutto">
+              Price brutto EUR
+            </label>
+            <input type="text" name="brutto" id="brutto" class="form__input form__input--brutto" disabled>
+            <span class="form__messages form__messages--brutto"></span>
+          </div>
+
+          <!-- submit -->
+          <div class="form__box">
+            <input type="submit" value="SUBMIT" class="form__input form__input--submit">
+          </div>
 
         </form>
       </main>

@@ -85,6 +85,7 @@ body {
   color: var(--c-primary);
 }
 
+.form__input,
 .form__select,
 .form__textarea {
   padding: 1rem;
@@ -140,3 +141,17 @@ body {
   color: var(--c-primary);
 }
 
+.form__input--submit{
+  background-color: var(--c-primary);
+  color: var(--c-dark);
+  font-weight: var(--fw-semibold);
+  border-color:  var(--c-dark);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form__input--submit:hover{
+  background-color: var(--c-primary-hover);
+  color: var(--c-secondary-light);
+  border-color:  var(--c-secondary-light);
+}
