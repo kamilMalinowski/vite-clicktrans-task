@@ -12,7 +12,9 @@
         <h1 class="main__title">Hello 
           <span class="primary">click</span><span class="secondary">trans</span>
         </h1>
+        <!-- form -->
         <form action="#" class="form">
+          <!-- textarea -->
           <div class="form__box">
             <label class="form__label" for="description">
               Description<span class="form__required">*</span>
@@ -21,6 +23,22 @@
             <span class="form__counter">0/255</span>
             <span class="form__messages"></span>
           </div>
+          <!-- radio button -->
+          <div class="form__box">
+            <label class="form__label" for="confirmation">
+              Send confirmation<span class="form__required">*</span>
+            </label>
+            <p class="form__wrapper-radio">
+              <input class="form__input-radio" type="radio" id="yes" name="confirmation" required>
+              <span class="form__text-radio">Yes</span>
+            </p>
+            <p class="form__wrapper-radio">
+              <input class="form__input-radio" type="radio" id="no" name="confirmation" required>
+              <span class="form__text-radio">No</span>
+            </p>
+            <span class="form__messages"></span>
+          </div>
+          <!--  -->
         </form>
       </main>
     </div>

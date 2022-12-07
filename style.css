@@ -6,6 +6,7 @@
   --c-dark: #0f0000;
 
   --c-primary: #ff7814;
+  --c-primary-dark: #e56a0d;
   --c-primary-hover: #ff9b4d;
   --c-secondary: #393f4d;
   --c-secondary-light: #76819b;
@@ -63,6 +64,9 @@ body {
 /* form */
 .form {
   padding: 2rem;
+  display: grid;
+  grid-gap: 3rem;
+  color: var(--c-secondary-light);
 }
 
 .form__box {
@@ -71,7 +75,6 @@ body {
 }
 
 .form__label {
-  color: var(--c-secondary-light);
   font-size: 1.3rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -105,10 +108,26 @@ body {
 
 .form__counter {
   right: 0.5rem;
-  color: var(--c-secondary-light);
 }
 
 .form__messages {
   left: 0;
   color: var(--c-primary);
+}
+
+.form__wrapper-radio {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form__input-radio {
+  cursor: pointer;
+  width: 1.6rem;
+  accent-color: var(--c-primary-dark);
+}
+
+.form__input-radio:checked  + .form__text-radio{
+  color:  var(--c-primary);
 }
