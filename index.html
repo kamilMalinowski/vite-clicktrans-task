@@ -14,6 +14,7 @@
         </h1>
         <!-- form -->
         <form action="#" class="form">
+
           <!-- textarea -->
           <div class="form__box">
             <label class="form__label" for="description">
@@ -21,8 +22,9 @@
             </label>
             <textarea class="form__textarea" id="description" name="description" minlength="1" maxlength="255" required></textarea>
             <span class="form__counter">0/255</span>
-            <span class="form__messages"></span>
+            <span class="form__messages form__messages--textarea"></span>
           </div>
+
           <!-- radio button -->
           <div class="form__box">
             <label class="form__label" for="confirmation">
@@ -36,9 +38,26 @@
               <input class="form__input-radio" type="radio" id="no" name="confirmation" required>
               <span class="form__text-radio">No</span>
             </p>
-            <span class="form__messages"></span>
+            <span class="form__messages form__messages--radio"></span>
           </div>
-          <!--  -->
+
+          <!-- select input -->
+          <div class="form__box">
+            <label class="form__label" for="vat">
+              VAT<span class="form__required">*</span>
+            </label>
+            <select class="form__select" name="vat" id="vat">
+              <option value="">Choose VAT</option>
+              <option value="19%">19%</option>
+              <option value="21%">21%</option>
+              <option value="23%">23%</option>
+              <option value="25%">25%</option>
+            </select>
+            <span class="form__messages form__messages--select"></span>
+          </div>
+
+          <!-- -->
+
         </form>
       </main>
     </div>

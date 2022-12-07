@@ -85,17 +85,25 @@ body {
   color: var(--c-primary);
 }
 
+.form__select,
 .form__textarea {
   padding: 1rem;
   border-radius: 4px;
   border: 2px solid var(--c-secondary-light);
+  color: inherit;
+  font-family: inherit;
   outline: none;
+  background-color: var(--c-light);
+}
+
+.form__textarea {
   resize: none;
   height: 20rem;
   line-height: 2rem;
 }
 
-.form__textarea:focus {
+.form__textarea:focus,
+.form__select:focus {
   border: 2px solid var(--c-primary-hover);
 }
 
@@ -128,6 +136,7 @@ body {
   accent-color: var(--c-primary-dark);
 }
 
-.form__input-radio:checked  + .form__text-radio{
-  color:  var(--c-primary);
+.form__input-radio:checked + .form__text-radio {
+  color: var(--c-primary);
 }
+

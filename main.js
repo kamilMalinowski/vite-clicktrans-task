@@ -5,7 +5,7 @@ import "./style.css";
 //Task 1 - textarea
 const textarea = document.querySelector(".form__textarea");
 const counter = document.querySelector(".form__counter");
-const messages = document.querySelector(".form__messages");
+const mgTextarea = document.querySelector(".form__messages--textarea");
 
 textarea.addEventListener("input", (e) => {
   const clicked = e.target.value.length;
@@ -13,8 +13,8 @@ textarea.addEventListener("input", (e) => {
   counter.textContent = `${clicked}/255`;
 
   if (clicked === 255)
-    messages.textContent = "You can’t enter more than 255 characters";
-  else messages.textContent = "";
+    mgTextarea.textContent = "You can’t enter more than 255 characters";
+  else mgTextarea.textContent = "";
 
-  if (clicked === 0) messages.textContent = "Text is required";
+  if (clicked === 0) mgTextarea.textContent = "Text is required";
 });
