@@ -8,6 +8,7 @@
   --c-primary: #ff7814;
   --c-primary-hover: #ff9b4d;
   --c-secondary: #393f4d;
+  --c-secondary-light: #76819b;
 
   --fw-light: 300;
   --fw-regular: 400;
@@ -37,9 +38,6 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: var(--fw-regular);
   position: relative;
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
 }
 
 .primary {
@@ -51,12 +49,66 @@ body {
 }
 
 .main {
-  max-width: 120rem;
+  max-width: 76.8rem;
   margin: 0 auto;
   padding: 1rem;
 }
 
 .main__title {
+  margin: 4rem 0 2rem;
   font-weight: var(--fw-regular);
   text-align: center;
+}
+
+/* form */
+.form {
+  padding: 2rem;
+}
+
+.form__box {
+  display: grid;
+  position: relative;
+}
+
+.form__label {
+  color: var(--c-secondary-light);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.form__required {
+  font-size: 1.6rem;
+  color: var(--c-primary);
+}
+
+.form__textarea {
+  padding: 1rem;
+  border-radius: 4px;
+  border: 2px solid var(--c-secondary-light);
+  outline: none;
+  resize: none;
+  height: 20rem;
+  line-height: 2rem;
+}
+
+.form__textarea:focus {
+  border: 2px solid var(--c-primary-hover);
+}
+
+.form__counter,
+.form__messages {
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: -2rem;
+}
+
+.form__counter {
+  right: 0.5rem;
+  color: var(--c-secondary-light);
+}
+
+.form__messages {
+  left: 0;
+  color: var(--c-primary);
 }

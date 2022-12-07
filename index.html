@@ -12,7 +12,16 @@
         <h1 class="main__title">Hello 
           <span class="primary">click</span><span class="secondary">trans</span>
         </h1>
-        <form action="#" class="form"></form>
+        <form action="#" class="form">
+          <div class="form__box">
+            <label class="form__label" for="description">
+              Description<span class="form__required">*</span>
+            </label>
+            <textarea class="form__textarea" id="description" name="description" minlength="1" maxlength="255" required></textarea>
+            <span class="form__counter">0/255</span>
+            <span class="form__messages"></span>
+          </div>
+        </form>
       </main>
     </div>
     <script type="module" src="/main.js"></script>
