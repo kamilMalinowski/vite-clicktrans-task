@@ -86,7 +86,9 @@ body {
 }
 
 .form::after,
-.form::before {
+.form::before,
+.success:after,
+.success::before {
   content: "";
   display: block;
   border-radius: 100%;
@@ -95,7 +97,8 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.form::after{
+.form::after,
+.success::after {
   width: 90rem;
   height: 90rem;
   background-color: var(--c-primary);
@@ -105,7 +108,8 @@ body {
   animation: grow 10s ease-in-out infinite alternate;
 }
 
-.form::before {
+.form::before,
+.success::before {
   width: 40rem;
   height: 40rem;
   background-color: var(--c-success);
@@ -207,6 +211,7 @@ body {
 .success {
   position: absolute;
   top: 0;
+  overflow: hidden;
   left: 0;
   width: 100%;
   min-height: 100vh;
@@ -218,7 +223,8 @@ body {
 }
 
 .success__box {
-  opacity: 0.95;
+  opacity: 1;
+  z-index: 3;
   background-color: var(--c-success);
   border-radius: var(--rounded);
   width: 20rem;
@@ -226,8 +232,8 @@ body {
   color: var(--c-secondary);
   display: grid;
   place-content: center;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
-  animation: show 1s ease-in-out infinite;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+  animation: show 2s ease-in-out;
 }
 
 .success__title {
@@ -239,11 +245,11 @@ body {
   border-color: var(--c-gray);
 }
 
-.visible{
+.visible {
   display: grid;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -251,11 +257,15 @@ body {
 @keyframes show {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(-1rem);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(1rem) rotate(2deg);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) rotate(2deg);
+    transform: translateY(0) rotate(0);
   }
 }
 
