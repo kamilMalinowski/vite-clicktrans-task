@@ -1,8 +1,6 @@
 # Clicktrans Task
 ## _Kamil Malinowski_
 
-[![logo](https://www.kamil--m.com/assets/img/logos/kamil-m-logo.svg)](Kamil-logo)
-
 ## Tech
 
 - HTML
